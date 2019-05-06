@@ -1221,7 +1221,7 @@ p.meta a:hover {
 }
 .format-video iframe, .entry iframe{
 	width: 100% !important;
-	 height: 245px;
+	/* height: 245px;*/
 	padding-bottom: 40px;
 }
 .format-video .post-content p:first-child {
