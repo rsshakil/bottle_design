@@ -1,0 +1,15 @@
+/* Composer style */
+
+.vc_element-icon.fr_sep{ background-image: url('img/sep.png') !important; }
+.vc_element-icon.fr_fuct{ background-image: url('img/fucts.png') !important; }
+.vc_element-icon.fucts_fn{ background-image: url('img/fucts_fn.png') !important; }
+.vc_element-icon.icon_block_1{ background-image: url('img/icon_block_1.png') !important; }
+.vc_element-icon.icon_block_2{ background-image: url('img/icon_block_2.png') !important; }
+.vc_element-icon.section_desc{ background-image: url('img/section_desc.png') !important; }
+.vc_element-icon.social{ background-image: url('img/social.png') !important; }
+.vc_element-icon.social_ext{ background-image: url('img/social_ext.png') !important; }
+.vc_element-icon.social_lrg{ background-image: url('img/social_lrg.png') !important; }
+.vc_element-icon.team{ background-image: url('img/team.png') !important; }
+.vc_element-icon.team_image{ background-image: url('img/team_image.png') !important; }
+.vc_element-icon.fr_call_to_action{ background-image: background-image: url("../vc/elements_icons_sprite.png") !important; background-position: 0 -704px; }
+.vc_element-icon.fr_progress_bar{ background-image: background-image: url("../vc/elements_icons_sprite.png") !important; background-position: 0 -960px; }
