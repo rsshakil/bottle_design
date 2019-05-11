@@ -18,6 +18,17 @@ $addons = $GLOBALS['addons'];
 				<div class="form-group row">
 					<label class="col-xs-1 col-sm-1 col-md-1" style="line-height: 24px;"><?php echo lang('designer_share'); ?>: </label>					
 					<div class="col-xs-1 col-sm-1 col-md-1">
+						<a href="javascript:fn()" class="" title="Line"><img src="https://d.line-scdn.net/r/web/social-plugin/img/common/square-default-small.png" width="25" height="25" title="Share this page on LINE"></a>
+						
+<script>
+		function fn(){
+			var URLS = $('#link-design-saved').val();
+			var ulr = 'https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(URLS);
+			window.open(ulr, "popupWindow", "width=600,height=600,scrollbars=yes");
+		}
+		</script>						
+					</div>
+					<div class="col-xs-1 col-sm-1 col-md-1">
 						<a href="javascript:void(0)" onclick="design.share.facebook()" class="icon-25 share-facebook" title="Facebook"></a> 
 					</div>
 					<div class="col-xs-1 col-sm-1 col-md-1">
