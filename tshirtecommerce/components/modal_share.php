@@ -21,12 +21,6 @@ $addons = $GLOBALS['addons'];
 						<a href="javascript:fn()" class="" title="Line"><img src="https://d.line-scdn.net/r/web/social-plugin/img/common/square-default-small.png" width="25" height="25" title="Share this page on LINE"></a>
 						
 <script>
-  jQuery.noConflict();
-    (function ($) {
-       
-
-        $(document).ready(readyFn); 
-    })(jQuery);
 	 function fn(){
 			var URLS = document.getElementById("link-design-saved").value;
 			var ulr = 'https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(URLS);
