@@ -23,14 +23,15 @@ $addons = $GLOBALS['addons'];
 <script>
   jQuery.noConflict();
     (function ($) {
-        function fn(){
-			var URLS = $('#link-design-saved').val();
-			var ulr = 'https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(URLS);
-			window.open(ulr, "popupWindow", "width=600,height=600,scrollbars=yes");
-		}
+       
 
         $(document).ready(readyFn); 
     })(jQuery);
+	 function fn(){
+			var URLS = document.getElementById("link-design-saved").value;
+			var ulr = 'https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(URLS);
+			window.open(ulr, "popupWindow", "width=600,height=600,scrollbars=yes");
+		}
 		
 		</script>						
 					</div>
