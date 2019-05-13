@@ -73,10 +73,12 @@ $addons = $GLOBALS['addons'];
 	<!-- menu text -->
 	<menu class="dropdown-toolbar dropdown-toolbar-textoptions">
 		<div class="toolbar-text">
-			<textarea class="form-control text-update" data-event="keyup" data-label="text" id="enter-text"></textarea>
+			<h4 class="fnt_title" style="text-align:center">下のボックスに テキストを入力してください</h4>
+			<textarea class="form-control text-update" data-event="keyup" data-label="text" style="height:100px;font-size:20px;" id="enter-text"></textarea>
 		</div>
 		<div class="dropdown-toolbar-content">
 			<div class="toolbar-row">
+				<h4 class="fnt_select_title" style="text-align:center">フォントを選択してください。</h4>
 				<button class="btn btn-default toolbar-font" data-target="#dg-fonts" data-toggle="modal">
 					<a id="txt-fontfamily" class="pull-left" href="javascript:void(0)">
 						<?php echo lang('designer_clipart_edit_arial'); ?>
