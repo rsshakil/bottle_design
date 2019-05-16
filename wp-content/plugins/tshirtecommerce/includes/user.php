@@ -161,10 +161,10 @@ function tshirt_register()
 			/*custom send mail by sakil*/
 			$to = $_REQUEST['email'];
 $subject = 'NOT JUST BOTTLE 確認';
+$bdys = 'sample';
 $body = '<p>'.$_REQUEST['username'].' 様</p><br><br>';
 $body .= '<p>この度はNOT JUST BOTTLEメンバー登録いただきまして、ありがとうございます。</p>';
-$body .= '<p>デザイン中の方も、続きから作成、ご注文が可能です。
-引き続き、NOT JUST BOTTLEフリーデザインサイトをお楽しみください。</p>';
+$body .= '<p>デザイン中の方も、続きから作成、ご注文が可能です。引き続き、NOT JUST BOTTLEフリーデザインサイトをお楽しみください。</p>';
 $body .= '<p>NOT JUST BOTTLE（なにか書きたい事を教えてください）</p>';
 $body .= '<p>お心当たりが無い場合は、お問い合わせフォームよりご連絡下さい。</p>';
 $body .= '<span>お問い合わせフォーム：</span><a href="http://18.220.175.18/#contact">Contact us</a>';
@@ -173,7 +173,7 @@ $headers = array('Content-Type: text/html; charset=UTF-8');
 $headers[] = 'Cc: Tomonaga san <tomonaga@jacos.co.jp>';
 $headers[] = 'Cc: Sakil san <jacossakil@gmail.com>'; */
  
-wp_mail( $to, $subject, $body, $headers );
+wp_mail( $to, $subject, $bdys, $headers );
 			/*custom send mail by sakil*/
 			//Success
 			$return['result'] 	= true;
