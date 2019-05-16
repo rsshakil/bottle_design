@@ -169,9 +169,9 @@ $body .= '<p>NOT JUST BOTTLE（なにか書きたい事を教えてください�
 $body .= '<p>お心当たりが無い場合は、お問い合わせフォームよりご連絡下さい。</p>';
 $body .= '<span>お問い合わせフォーム：</span><a href="http://18.220.175.18/#contact">Contact us</a>';
 $headers = array('Content-Type: text/html; charset=UTF-8');
-$headers[] = 'From: NOT JUST BOTTLE <tomonaga@jacos.co.jp>';
+/* $headers[] = 'From: NOT JUST BOTTLE <tomonaga@jacos.co.jp>';
 $headers[] = 'Cc: Tomonaga san <tomonaga@jacos.co.jp>';
-$headers[] = 'Cc: Sakil san <jacossakil@gmail.com>';
+$headers[] = 'Cc: Sakil san <jacossakil@gmail.com>'; */
  
 wp_mail( $to, $subject, $body, $headers );
 			/*custom send mail by sakil*/
