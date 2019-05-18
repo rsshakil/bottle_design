@@ -208,9 +208,9 @@ var design={
 			design.products.sizes();
 		});
 		jQuery('#quantity').keyup(function(e){
-			var currnt_vl = $(this).val();
+			var currnt_vl = $(this).attr('aria-valuenow');
 			var minimum_vl = $(this).attr('data-count');
-			if(minimum_vl<currnt_vl){
+			if(minimum_vl>currnt_vl){
 				alert('申し訳ございません。<br>ご注文最小単位は３ケースとなります。');
 			}
 			design.ajax.getPrice();			
