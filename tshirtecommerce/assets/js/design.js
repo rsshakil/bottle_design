@@ -208,13 +208,12 @@ var design={
 			design.products.sizes();
 		});
 		jQuery('#quantity').keyup(function(e){
-			var currnt_vl = jQuery(this).attr('aria-valuenow');
-			var minimum_vl = jQuery(this).attr('data-count');
-			console.log(currnt_vl);
-			console.log(minimum_vl);
-			if(minimum_vl>currnt_vl){
-				alert('申し訳ございません。<br>ご注文最小単位は３ケースとなります。');
-			}
+			/*check console*/
+				var currnt_vl = jQuery(this).attr('aria-valuenow');
+var minimum_vl = jQuery(this).attr('data-count');
+console.log(currnt_vl);
+console.log(minimum_vl);
+				/*check console*/
 			design.ajax.getPrice();			
 			e.preventDefault();	
 			return false;	
@@ -378,7 +377,7 @@ var design={
 			}
 			var quantity = jQuery('#quantity').val();
 				quantity = parseInt(quantity);
-			if (isNaN(quantity) == true || quantity < 3)
+			if (isNaN(quantity) == true || quantity < 1)
 			{
 				alert_text(lang.designer.quantity);
 				scrollQuantity();
@@ -2109,29 +2108,12 @@ var design={
 			});
 			
 			jQuery('#quantity').keyup(function(e){
-				/*minimum order by sakil*/
-				
+				/*check console*/
 				var currnt_vl = jQuery(this).attr('aria-valuenow');
 var minimum_vl = jQuery(this).attr('data-count');
 console.log(currnt_vl);
-console.log(min_order);
 console.log(minimum_vl);
-				
-				var quantity = jQuery('#quantity').val();
-				
-				quantity = parseInt(quantity);
-			if (isNaN(quantity) == true || quantity < 3)
-			{
-				alert_text(lang.designer.quantity);
-				scrollQuantity();
-				return false;
-			}
-			if (quantity < min_order){
-				alert_text(lang.designer.quantityMin +' '+min_order+'. '+lang.designer.quantity);
-				scrollQuantity();
-				return false;
-			}
-				/*minimum order by sakil*/
+				/*check console*/
 				design.ajax.getPrice();
 				var code = e.keyCode || e.which;
 				if (code == 13) { 
