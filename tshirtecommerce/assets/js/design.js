@@ -208,12 +208,6 @@ var design={
 			design.products.sizes();
 		});
 		jQuery('#quantity').keyup(function(e){
-			/*check console*/
-				var currnt_vl = jQuery(this).attr('aria-valuenow');
-var minimum_vl = jQuery(this).attr('data-count');
-console.log(currnt_vl);
-console.log(minimum_vl);
-				/*check console*/
 			design.ajax.getPrice();			
 			e.preventDefault();	
 			return false;	
@@ -2110,9 +2104,11 @@ console.log(minimum_vl);
 			jQuery('#quantity').keyup(function(e){
 				/*check console*/
 				var currnt_vl = jQuery(this).attr('aria-valuenow');
-var minimum_vl = jQuery(this).attr('data-count');
-console.log(currnt_vl);
-console.log(minimum_vl);
+				if (currnt_vl < min_order){
+					alert_text(lang.designer.quantityMin +' '+min_order+'. '+lang.designer.quantity);
+					scrollQuantity();
+					return false;
+				}
 				/*check console*/
 				design.ajax.getPrice();
 				var code = e.keyCode || e.which;
