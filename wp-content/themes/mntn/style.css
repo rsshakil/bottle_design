@@ -101,7 +101,7 @@ body {
 p{ font-family:  "Muli", Arial, sans-serif; }
 a, #reply-title a {
 	text-decoration: none;
-	color: #fff;
+	/*color: #fff;*/
 }
 .post-edit-link{
 	color: #444;
