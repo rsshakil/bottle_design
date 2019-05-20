@@ -438,7 +438,7 @@ add_action( 'admin_enqueue_scripts', 'media_upload_styles' );
 add_filter( 'manage_edit-shop_order_columns', 'bbloomer_add_new_order_admin_list_column' );
  
 function bbloomer_add_new_order_admin_list_column( $columns ) {
-    $columns['billing_country'] = 'Country';
+    $columns['billing_country'] = 'Product Name';
     return $columns;
 }
  
@@ -451,7 +451,12 @@ function bbloomer_add_new_order_admin_list_column_content( $column ) {
     if ( 'billing_country' === $column ) {
  
         $order = wc_get_order( $post->ID );
-        echo $order->get_billing_country();
+		$prod_names = array();
+		foreach($order->get_items() as $item) {
+			$prod_names[] = $item['name'];
+		}
+        echo implode(",", $prod_names );
+        //echo $order->get_billing_country();
       
     }
 }	
