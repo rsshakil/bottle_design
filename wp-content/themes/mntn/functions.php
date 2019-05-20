@@ -433,4 +433,25 @@ add_action( 'admin_enqueue_scripts', 'media_upload' );
 function media_upload_styles() {
 	wp_enqueue_style('thickbox');
 }
-add_action( 'admin_enqueue_scripts', 'media_upload_styles' );	
+add_action( 'admin_enqueue_scripts', 'media_upload_styles' );
+
+add_filter( 'manage_edit-shop_order_columns', 'bbloomer_add_new_order_admin_list_column' );
+ 
+function bbloomer_add_new_order_admin_list_column( $columns ) {
+    $columns['billing_country'] = 'Country';
+    return $columns;
+}
+ 
+add_action( 'manage_shop_order_posts_custom_column', 'bbloomer_add_new_order_admin_list_column_content' );
+ 
+function bbloomer_add_new_order_admin_list_column_content( $column ) {
+   
+    global $post;
+ 
+    if ( 'billing_country' === $column ) {
+ 
+        $order = wc_get_order( $post->ID );
+        echo $order->get_billing_country();
+      
+    }
+}	
