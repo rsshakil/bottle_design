@@ -37,14 +37,16 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 	</div>
 	<div class="toolbar-left">
 		<ul class="header-menu pull-left">
-			<li class="dropdown menu-item-file">
+			<!-- <li class="dropdown menu-item-file">
 				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php echo lang('designer_file'); ?> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 				
 				<ul class="dropdown-menu">
 					<li><a href="javascript:void(0)" onclick="design.tools.reset(this);"><?php echo lang('designer_new_design'); ?></a></li>
 					<li <?php echo cssShow($settings, 'show_my_design'); ?>><a href="javascript:void(0)" class="add_item_mydesign"><?php echo lang('designer_menu_my_design'); ?></a></li>
 				</ul>
-			</li>
+			</li> -->
+			<li><a href="javascript:void(0)" onclick="design.tools.reset(this);"><?php echo lang('designer_new_design'); ?></a></li>
+			<li <?php echo cssShow($settings, 'show_my_design'); ?>><a href="javascript:void(0)" class="add_item_mydesign"><?php echo lang('designer_menu_my_design'); ?></a></li>
 		</ul>
 	</div>
 	
