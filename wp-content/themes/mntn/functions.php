@@ -491,3 +491,18 @@ function add_awaiting_shipment_to_order_statuses( $order_statuses ) {
 
 add_filter( 'wc_order_statuses', 'add_awaiting_shipment_to_order_statuses' );
 
+function wc_renaming_order_status( $order_statuses ) {
+    foreach ( $order_statuses as $key => $status ) {
+        $new_order_statuses[ $key ] = $status;
+        
+        if ( 'wc-completed' === $key ) {
+            $order_statuses['wc-completed'] = _x( '出荷完了', 'Order status', 'woocommerce' );
+        }
+        if ( 'wc-on-hold' === $key ) {
+            $order_statuses['wc-on-hold'] = _x( '生産待ち', 'Order status', 'woocommerce' );
+        }
+    }
+    return $order_statuses;
+}
+add_filter( 'wc_order_statuses', 'wc_renaming_order_status' );
+
