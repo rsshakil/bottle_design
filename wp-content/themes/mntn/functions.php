@@ -499,7 +499,13 @@ function wc_renaming_order_status( $order_statuses ) {
             $order_statuses['wc-completed'] = _x( '出荷完了', 'Order status', 'woocommerce' );
         }
         if ( 'wc-on-hold' === $key ) {
-            $order_statuses['wc-on-hold'] = _x( '生産待ち', 'Order status', 'woocommerce' );
+            $order_statuses['wc-on-hold'] = _x( '生産終了', 'Order status', 'woocommerce' );
+        }
+        if ( 'wc-processing' === $key ) {
+            $order_statuses['wc-processing'] = _x( '生産中', 'Order status', 'woocommerce' );
+        }
+        if ( 'wc-pending' === $key ) {
+            $order_statuses['wc-pending'] = _x( '支払い待ち', 'Order status', 'woocommerce' );
         }
     }
     return $order_statuses;
