@@ -2663,7 +2663,7 @@ var design={
 			$jd('.ui-lock').attr('checked', false);
 			var txt = {};
 			
-			txt.text = 'テキストを\n入力して\nください';
+			txt.text = 'テキストを入力してください';
 			txt.color = '#FF0000';
 			txt.fontSize = '24px';
 			txt.fontFamily = 'arial';
