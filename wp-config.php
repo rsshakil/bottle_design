@@ -83,6 +83,9 @@ define( 'WP_DEBUG', false );
 
 define('FS_METHOD', 'direct');
 
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'rs_312736' );
+
 /**
  * The WP_SITEURL and WP_HOME options are configured to access from any hostname or IP address.
  * If you want to access only from an specific domain, you can modify them. For example:
