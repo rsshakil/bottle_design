@@ -210,7 +210,10 @@ img#about-image {
 /*------------[CAPTIONS AND ALIGNMENTS]-----------*/
 /*------------------------------------------------*/
 .custom_page {
-    margin-top: 80px !important;
+    /* margin-top: 80px !important; */
+}
+.page_header {
+    padding-top: 90px;
 }
 div.post .new-post .aligncenter, .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .wp-caption { text-align: center; background-color: #f3f3f3; margin-bottom: 10px;  max-width: 100% !important; }
