@@ -83,8 +83,8 @@ define( 'WP_DEBUG', false );
 
 define('FS_METHOD', 'direct');
 
- define( 'WPMS_ON', true );
- define( 'WPMS_SMTP_PASS', 'BAQjiRmWWd70BJ7GNTfF/ku5lcSiR4ktFukPalT1Pd5Q' );
+ // define( 'WPMS_ON', true );
+ // define( 'WPMS_SMTP_PASS', 'BAQjiRmWWd70BJ7GNTfF/ku5lcSiR4ktFukPalT1Pd5Q' );
 
 /**
  * The WP_SITEURL and WP_HOME options are configured to access from any hostname or IP address.
