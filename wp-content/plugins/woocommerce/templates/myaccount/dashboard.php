@@ -45,8 +45,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script type="text/javascript" >
 jQuery(document).ready(function($) {
-
-        $.get('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', function(response) {
+		var data = {
+            url: '<?php echo esc_url( home_url() ).'/design-your-own'; ?>',
+            //whatever: 1234,
+            datas['page']: 0
+        };
+        $.get('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', data, function(response) {
            // alert('Got this from the server: ' + response);
            $('#wpajaxdisplay').html(response);      
         });
