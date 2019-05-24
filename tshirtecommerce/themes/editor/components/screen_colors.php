@@ -74,7 +74,7 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 		if (empty($_SESSION['is_logged']) && $_SESSION['is_logged'] === false)
 		{?>
 			<button type="button" class="btn btn btn-none btn-sm pull-left" onclick="jQuery('#f-login').modal()">
-			<i class="fas fa-sign-in-alt"></i><br />
+			<i class="fa fa-sign-in"></i><br />
 			<small><?php echo lang('designer_user_login'); ?></small>
 		</button>
 		<?php }
