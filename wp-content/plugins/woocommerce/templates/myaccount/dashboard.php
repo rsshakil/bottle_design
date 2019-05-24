@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
             //whatever: 1234,
             datas['page']: 0
         };
-        $.get('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', data, function(response) {
+        $.post('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', data, function(response) {
            // alert('Got this from the server: ' + response);
            $('#wpajaxdisplay').html(response);      
         });
