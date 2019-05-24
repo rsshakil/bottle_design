@@ -80,7 +80,7 @@ if ( is_user_logged_in() ) {
 		</button>
 	<?php 
 } else {?>
-    <button type="button" class="btn btn btn-none btn-sm pull-left" onclick="jQuery('#f-login').modal()">
+    <button type="button" class="btn btn btn-none btn-sm pull-left">
 			<i class="fas fa-sign-in-alt"></i><br />
 			<small><?php echo lang('designer_user_login'); ?></small>
 		</button>
