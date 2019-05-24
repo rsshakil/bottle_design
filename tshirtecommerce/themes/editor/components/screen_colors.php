@@ -70,22 +70,7 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 	</div>
 	
 	<div class="pull-right tools-btn">
-		<?php
-if ( is_user_logged_in() ) {
-	 $current_user = wp_get_current_user();
-    $loged_user = 'ようこそ,'.$current_user->user_login;
-	?>
-	<button type="button" class="btn btn btn-none btn-sm pull-left">
-			<small><?php echo $loged_user; ?></small>
-		</button>
-	<?php 
-} else {?>
-    <button type="button" class="btn btn btn-none btn-sm pull-left">
-			<i class="fas fa-sign-in-alt"></i><br />
-			<small><?php echo lang('designer_user_login'); ?></small>
-		</button>
-<?php }
-?>
+
 		<button type="button" class="btn btn btn-none btn-sm btn-save-design dg-tooltip pull-left" onclick="design.save()">
 			<i class="flaticon flaticon-14 flaticon-floppy-disk"></i><br />
 			<small><?php echo lang('designer_save_btn'); ?></small>
