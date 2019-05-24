@@ -30,6 +30,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) )
 	);
 ?></p>
+<div class="product_area" id="wpajaxdisplay">
+	
+</div>
 
 <!--<p><?php
 	printf(
@@ -39,6 +42,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
 ?></p>-->
+
+<script type="text/javascript" >
+jQuery(document).ready(function($) {
+
+        $.get('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', function(response) {
+           // alert('Got this from the server: ' + response);
+           $('#wpajaxdisplay').html(response);      
+        });
+});
+
+</script>
 
 <?php
 	/**
