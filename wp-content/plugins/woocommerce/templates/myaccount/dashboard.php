@@ -30,10 +30,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) )
 	);
 ?></p>
+<div class="clearfix"></div>
+<div class="row">
 <div class="product_area" id="wpajaxdisplay">
 	
 </div>
-
+</div>
+<div class="clearfix"></div>
 <!--<p><?php
 	printf(
 		__( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
