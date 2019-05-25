@@ -316,6 +316,111 @@ switch($type){
 		}
 		break;
 	
+	
+	// load design
+	case 'userDesign_myaccount':
+		
+		$desgn_url = $_POST['design_url'];
+		$desgn_img_url = $_POST['img_url'];
+		
+		if (empty($_SESSION['is_logged']) && $_SESSION['is_logged'] === false)
+		{
+			echo 'Please login';
+			exit;
+		}
+		$is_logged 	= $_SESSION['is_logged'];
+		$user_id 	= md5($is_logged['id']);
+		
+		// get old data
+		if (isset($_COOKIE['design']))
+		{
+			$user 	= $_COOKIE['design'];
+			$cache 	= $dg->cache();
+			$designs 	= $cache->get($user);
+			if ($designs != null && count($designs) > 0)
+			{				
+				// move data
+				if ($is_logged['is_admin'] === true)
+				{
+					$cache = $dg->cache('admin');
+				}
+				else
+				{
+					$cache = $dg->cache();
+				}
+				$cache->set($user_id, $designs);
+				setcookie('design', $user, time() - (86400 * 100), "/");
+			}
+		}
+		$user = $user_id;
+		
+		// get all design
+		if (isset($is_logged['is_admin']) && $is_logged['is_admin'] === true)
+		{			
+			$cache = $dg->cache('admin');
+		}
+		else
+		{
+			$cache = $dg->cache();
+		}
+		$designs = $cache->get($user_id);
+					
+		$baseURL = $_POST['url'];
+		if (strpos($baseURL, '?') > 0)
+		{
+			$url = '&design=';
+		}
+		else
+		{
+			$url = '?design=';
+		}		
+		
+		if ($designs == null || count($designs) == 0)
+		{
+			echo lang('design_msg_save_found', true);
+			return;
+		}
+		else
+		{	
+			$designs = array_reverse($designs, true);
+			// get page
+			if ($_POST['datas'])
+			{
+				$datas = $_POST['datas'];
+				if (isset($datas['page']))
+					$page = $datas['page'];
+			}
+			if (empty($page))
+				$page = 0;
+			
+			$html = '';
+			$i = 0;
+			$number = 9;
+			foreach($designs as $key => $design)
+			{
+				if(isset($design['is_ideas'])) continue;
+				$i++;
+				if ($i <= ($number * $page)) continue;
+				if ($i > ($number * ($page+1))) break;
+				
+				$link = $desgn_url.$url.$user.':'.$key.':'.$design['product_id'].':'.$design['product_options'].':'.$design['parent_id'].'&parent_id='.$design['parent_id'];				
+				$html .= '<div class="col-xs-6 col-sm-4 col-md-3 design-box">'
+						. 	'<a href="'.$link.'" title="'.lang('design_load', true).'">'
+						.		'<img src="'.$desgn_img_url.$design['image'].'" class="img-responsive img-thumbnail" alt="">';
+				if ($design['title'] != '')
+				{
+					$html 	.= '<span title="'.$design['description'].'" class="text-muted"><small>'.$design['title'].'</small></span>';
+				}
+				
+				$html 	.=	'</a>'
+						.	'<span class="design-action design-action-remove" onclick="design.ajax.removeDesign(this)" data-id="'.$user.':'.$key.'" title="Remove this design"><i class="red glyphicons remove_2"></i></span>'
+						. '</div>';
+			}
+			echo $html;
+		}
+		break;
+	
+	
 	// load design idea
 	case 'loadDesign':
 		if (isset($_GET['user_id']))

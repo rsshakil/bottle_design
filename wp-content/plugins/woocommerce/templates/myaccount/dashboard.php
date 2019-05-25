@@ -50,10 +50,11 @@ jQuery(document).ready(function($) {
 		datas.page=page;
 		var data = {
             url: '<?php echo esc_url( home_url() ).'/design-your-own/'; ?>',
-            //whatever: 1234,
+            design_url: '<?php echo esc_url( home_url() ).'/design-your-own/'; ?>',
+            img_url: '<?php echo esc_url( home_url() ).'/tshirtecommerce/'; ?>',
             datas: datas
         };
-        $.post('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', data, function(response) {
+        $.post('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign_myaccount', data, function(response) {
            // alert('Got this from the server: ' + response);
            $('#wpajaxdisplay').html(response);      
         });
