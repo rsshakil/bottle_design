@@ -45,10 +45,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script type="text/javascript" >
 jQuery(document).ready(function($) {
+		var page = 0;
+		var datas = {};
 		var data = {
             url: '<?php echo esc_url( home_url() ).'/design-your-own/'; ?>',
             //whatever: 1234,
-            datas: ''
+            datas.page: page
         };
         $.post('<?php echo esc_url( home_url() ); ?>/tshirtecommerce/ajax.php?type=userDesign', data, function(response) {
            // alert('Got this from the server: ' + response);
