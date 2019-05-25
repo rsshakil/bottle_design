@@ -208,6 +208,14 @@ var design={
 			design.products.sizes();
 		});
 		jQuery('#quantity').keyup(function(e){
+			/*check console*/
+				var currnt_vl = jQuery(this).attr('aria-valuenow');
+				if (currnt_vl < min_order){
+					alert_text(lang.designer.quantityMin +' '+min_order+'. '+lang.designer.quantity);
+					scrollQuantity();
+					return false;
+				}
+				/*check console*/
 			design.ajax.getPrice();			
 			e.preventDefault();	
 			return false;	
