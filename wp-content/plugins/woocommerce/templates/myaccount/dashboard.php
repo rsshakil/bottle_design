@@ -31,10 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	);
 ?></p>
 <div class="clearfix"></div>
-<div class="row">
-<div class="product_area" id="wpajaxdisplay">
-	
-</div>
+<div class="row list-design-saved" id="wpajaxdisplay">
+
 </div>
 <div class="clearfix"></div>
 <!--<p><?php
