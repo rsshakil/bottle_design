@@ -66,8 +66,12 @@ jQuery(document).ready(function($) {
 .list-design-saved .design-box {
     height: 200px;
     overflow: hidden;
+	float:left,
+	width:310px;
 }
-
+.design-action-remove {
+    display: none;
+}
 .design-box {
     padding: 4px;
     position: relative;
