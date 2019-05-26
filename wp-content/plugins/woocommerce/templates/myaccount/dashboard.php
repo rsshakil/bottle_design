@@ -62,6 +62,52 @@ jQuery(document).ready(function($) {
 });
 
 </script>
+<style>
+.list-design-saved .design-box {
+    height: 200px;
+    overflow: hidden;
+}
+
+.design-box {
+    padding: 4px;
+    position: relative;
+}
+.list-design-saved .design-box a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.design-action.design-action-remove {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0;
+    height: 22px;
+    padding-left: 2px;
+    top: 4px;
+    width: 20px;
+    left: 4px;
+}
+
+.design-box .design-action {
+    cursor: pointer;
+    position: absolute;
+}
+.list-design-saved .design-box a img.img-responsive.img-thumbnail {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+</style>
 
 <?php
 	/**
