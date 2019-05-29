@@ -133,6 +133,38 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 					<a href="#none" <?php echo cssShow($settings, 'show_product_info'); ?> data-target="#modal-product-info" data-toggle="modal" class="btn btn-default pull-left btn-sm"><i class="flaticon-14 glyph-icon flaticon-file"></i> <span><?php echo lang('design_product_info'); ?></span></a>
 					<a href="#none" <?php echo cssShow($settings, 'show_product_size'); ?> data-target="#modal-product-size" data-toggle="modal" class="btn btn-default pull-right btn-sm"><span><?php echo lang('design_size_chart'); ?></span> <i class="flaticon-14 glyph-icon flaticon-next"></i></a>
 				</div>
+				
+				<!--by sakil-->
+				<div class="product-discount" style="<?php if(!isset($product->prices)) echo 'display: none;'; ?>">
+					<h5><?php echo lang('designer_discount'); ?></h5>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th><?php echo lang('designer_js_text_from'); ?></th>
+								<th><?php echo lang('designer_to'); ?></th>
+								<th><?php echo lang('designer_price'); ?></th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php if(isset($product->prices) && isset($product->prices->price) ) { ?>
+							
+							<?php 
+							foreach($product->prices->price as $ip => $price_discount) {
+								$saving 	= (($product->price - $price_discount)/$product->price)*100;
+							?>
+							<tr>
+								<td><?php echo $product->prices->min_quantity[$ip]; ?></td>
+								<td><?php echo $product->prices->max_quantity[$ip]; ?></td>
+								<td><?php echo $settings->currency_symbol; ?><?php echo $price_discount; ?> (<?php echo number_format($saving, 2); ?>%)</td>
+							</tr>
+							<?php } ?>
+
+						<?php } ?>
+						</tbody>
+					</table>
+				</div>
+				<!--by sakil-->
+				
 			</div>
 		</div>
 
