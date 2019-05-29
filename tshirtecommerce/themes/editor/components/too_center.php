@@ -127,13 +127,6 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 						<?php $addons->view('attribute'); ?>
 					</div>
 				</form>
-				
-				<hr />
-				<div class="products-detail">
-					<a href="#none" <?php echo cssShow($settings, 'show_product_info'); ?> data-target="#modal-product-info" data-toggle="modal" class="btn btn-default pull-left btn-sm"><i class="flaticon-14 glyph-icon flaticon-file"></i> <span><?php echo lang('design_product_info'); ?></span></a>
-					<a href="#none" <?php echo cssShow($settings, 'show_product_size'); ?> data-target="#modal-product-size" data-toggle="modal" class="btn btn-default pull-right btn-sm"><span><?php echo lang('design_size_chart'); ?></span> <i class="flaticon-14 glyph-icon flaticon-next"></i></a>
-				</div>
-				
 				<!--by sakil-->
 				<div class="product-discount" style="<?php if(!isset($product->prices)) echo 'display: none;'; ?>">
 					<h5><?php echo lang('designer_discount'); ?></h5>
@@ -164,6 +157,13 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 					</table>
 				</div>
 				<!--by sakil-->
+				<hr />
+				<div class="products-detail">
+					<a href="#none" <?php echo cssShow($settings, 'show_product_info'); ?> data-target="#modal-product-info" data-toggle="modal" class="btn btn-default pull-left btn-sm"><i class="flaticon-14 glyph-icon flaticon-file"></i> <span><?php echo lang('design_product_info'); ?></span></a>
+					<a href="#none" <?php echo cssShow($settings, 'show_product_size'); ?> data-target="#modal-product-size" data-toggle="modal" class="btn btn-default pull-right btn-sm"><span><?php echo lang('design_size_chart'); ?></span> <i class="flaticon-14 glyph-icon flaticon-next"></i></a>
+				</div>
+				
+				
 				
 			</div>
 		</div>

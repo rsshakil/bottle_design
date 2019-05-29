@@ -12,8 +12,6 @@ if (isset($settings->show_detail_price) && $settings->show_detail_price == 0)
 		<!-- product -->
 		<div id="right-options">
 			<div class="product-options" id="product-details">
-				
-				<?php ?>
 				<div class="product-discount" style="<?php if(!isset($product->prices)) echo 'display: none;'; ?>">
 					<h5><?php echo lang('designer_discount'); ?></h5>
 					<table class="table table-bordered">
@@ -68,7 +66,7 @@ if (isset($settings->show_detail_price) && $settings->show_detail_price == 0)
 							<span id="product-price-old">
 								<?php echo $settings->currency_symbol; ?><span class="price-old-number"></span>
 							</span>
-						</div>						
+						</div>					
 					</div>
 					
 					<button <?php echo cssShow($settings, 'show_add_to_cart', 1); ?> type="button" class="btn btn-warning btn-addcart" onclick="design.ajax.addJs(this)"><i class="glyph-icon flaticon-shopping-cart flaticon-16"></i> <?php echo lang('designer_right_buy_now'); ?></button>

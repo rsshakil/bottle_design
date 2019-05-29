@@ -93,12 +93,14 @@ $logo_icon_url 	= $GLOBALS['logo_icon_url'];
 			<i class="flaticon flaticon-16 flaticon-view"></i><br />
 			<small><?php echo lang('designer_top_preview'); ?></small>
 		</button>
-
-		<button type="button" onclick="show_cartoption();" class="btn btn-gray">
+<button <?php echo cssShow($settings, 'show_add_to_cart', 1); ?> type="button" class="btn btn-warning btn-addcart" onclick="design.ajax.addJs(this)"><i class="glyph-icon flaticon-shopping-cart flaticon-16"></i> <?php echo lang('designer_right_buy_now'); ?>
+<span class="tools-price pull-right" <?php echo cssShow($settings, 'show_total_price'); ?>></span>
+</button>
+		<!--<button type="button" onclick="show_cartoption();" class="btn btn-gray">
 			<?php echo lang('designer_right_buy_now'); ?>
 
 			<span class="tools-price pull-right" <?php echo cssShow($settings, 'show_total_price'); ?>></span>
-		</button>
+		</button>-->
 	</div>
 	<!-- END sidebar -->
 </div>
