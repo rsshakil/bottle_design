@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-wc_print_notice( __( 'Password reset email has been sent.', 'woocommerce' ) );
+wc_print_notice( __( 'パスワード再設定メールが送信されました。', 'woocommerce' ) );
 ?>
 
-<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', __( 'A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset.', 'woocommerce' ) ) ); ?></p>
+<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', __( 'アカウント登録のメールアドレスにパスワード再設定のメールが送信されましたが、受信トレイに表示されるまでに数分かかることがあります。', 'woocommerce' ) ) ); ?></p>
