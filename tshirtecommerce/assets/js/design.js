@@ -2669,7 +2669,7 @@ var design={
 		},		
 		create: function(){
 			$jd('.ui-lock').attr('checked', false);
-			
+			toobar_menu('e','textoptions');
 			var txt = {};
 			
 			txt.text = 'テキスト';
