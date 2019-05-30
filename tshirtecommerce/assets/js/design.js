@@ -2669,7 +2669,7 @@ var design={
 		},		
 		create: function(){
 			$jd('.ui-lock').attr('checked', false);
-			jQuery('.dropdown-toolbar-textoptions').css('display','block');
+			$jd('.dropdown-toolbar-textoptions').css('display','block');
 			var txt = {};
 			
 			txt.text = 'テキスト';
