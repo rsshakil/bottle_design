@@ -73,7 +73,10 @@ var design={
 		/* menu */
 		$jd('.menu-left a').click(function(){
 			$jd('.menu-left a').removeClass('active');
-			if($jd(this).hasClass('add_item_text')) self.text.create();
+			if($jd(this).hasClass('add_item_text')) {
+				$jd('.dropdown-toolbar-textoptions').css('display','block');
+				self.text.create();
+			}
 			if($jd(this).hasClass('add_item_team')) self.team.create();
 			if($jd(this).hasClass('add_item_qrcode')) self.qrcode.open();
 			$jd(this).addClass('active');
@@ -2669,7 +2672,7 @@ var design={
 		},		
 		create: function(){
 			$jd('.ui-lock').attr('checked', false);
-			$jd('.dropdown-toolbar-textoptions').css('display','block');
+			
 			var txt = {};
 			
 			txt.text = 'テキスト';
