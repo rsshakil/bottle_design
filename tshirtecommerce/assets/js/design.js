@@ -74,7 +74,7 @@ var design={
 		$jd('.menu-left a').click(function(){
 			$jd('.menu-left a').removeClass('active');
 			if($jd(this).hasClass('add_item_text')) {
-				$jd('.toolbar-texts')[0].onclick();
+				toobar_menu_text_onoff('textoptions');
 				self.text.create();
 			}
 			if($jd(this).hasClass('add_item_team')) self.team.create();
@@ -6118,4 +6118,15 @@ function gridArt(elem)
 		var e = jQuery(elem);
 		e.isotope( 'reloadItems' ).isotope();
 	});
+}
+function toobar_menu_text_onoff(div){
+	var elm = jQuery('.dropdown-toolbar-'+div);
+	var display = elm.css('display');
+	if(display != 'none'){
+		jQuery('.dropdown-toolbar').hide();
+		return;
+	}
+
+	jQuery('.dropdown-toolbar').hide();
+	elm.show();
 }
