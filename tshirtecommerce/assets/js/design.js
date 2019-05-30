@@ -6120,6 +6120,7 @@ function gridArt(elem)
 	});
 }
 function toobar_menu_text_onoff(div){
+	alert('test');
 	var elm = jQuery('.dropdown-toolbar-'+div);
 	var display = elm.css('display');
 	if(display != 'none'){
