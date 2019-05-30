@@ -2669,6 +2669,9 @@ var design={
 		},		
 		create: function(){
 			$jd('.ui-lock').attr('checked', false);
+			$(".toolbar-texts").trigger("click");
+			$('.toolbar-texts').addClass('active');
+			
 			var txt = {};
 			
 			txt.text = 'テキスト';
