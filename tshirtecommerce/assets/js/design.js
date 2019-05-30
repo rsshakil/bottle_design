@@ -74,8 +74,7 @@ var design={
 		$jd('.menu-left a').click(function(){
 			$jd('.menu-left a').removeClass('active');
 			if($jd(this).hasClass('add_item_text')) {
-				$jd('.dropdown-toolbar-textoptions').css('display','block');
-				toobar_menu(this, 'textoptions');
+				$jd('.toolbar-texts').onclick();
 				self.text.create();
 			}
 			if($jd(this).hasClass('add_item_team')) self.team.create();
