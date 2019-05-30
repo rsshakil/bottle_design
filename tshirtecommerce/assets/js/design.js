@@ -75,6 +75,7 @@ var design={
 			$jd('.menu-left a').removeClass('active');
 			if($jd(this).hasClass('add_item_text')) {
 				$jd('.dropdown-toolbar-textoptions').css('display','block');
+				toobar_menu(this, 'textoptions');
 				self.text.create();
 			}
 			if($jd(this).hasClass('add_item_team')) self.team.create();
