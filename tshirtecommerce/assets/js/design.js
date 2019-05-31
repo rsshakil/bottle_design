@@ -6120,8 +6120,10 @@ function gridArt(elem)
 	});
 }
 function toobar_menu_text_onoff(div){
-	alert(div);
-	jQuery('.dropdown-toolbar-'+div).show();
+	alert(222);
+	jQuery('.dropdown-toolbar').hide();
+	jQuery('dropdown-toolbar-textoptions').show();
+	alert(333);
 	/*
 	var display = elm.css('display');
 	if(display != 'none'){
