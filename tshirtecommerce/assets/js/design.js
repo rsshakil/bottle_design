@@ -74,7 +74,14 @@ var design={
 		$jd('.menu-left a').click(function(){
 			$jd('.menu-left a').removeClass('active');
 			if($jd(this).hasClass('add_item_text')) {
-				toobar_menu_text_onoff('textoptions');
+				console.log(444);
+	jQuery('.dropdown-toolbar').hide();
+	jQuery('dropdown-toolbar-textoptions').show();
+	$jd('dropdown-toolbar-textoptions').show();
+	
+	jQuery('dropdown-toolbar-textoptions').css('display','block');
+	$jd('dropdown-toolbar-textoptions').css('display','block');
+	console.log(222);
 				self.text.create();
 			}
 			if($jd(this).hasClass('add_item_team')) self.team.create();
@@ -6118,19 +6125,4 @@ function gridArt(elem)
 		var e = jQuery(elem);
 		e.isotope( 'reloadItems' ).isotope();
 	});
-}
-function toobar_menu_text_onoff(div){
-	alert(222);
-	jQuery('.dropdown-toolbar').hide();
-	jQuery('dropdown-toolbar-textoptions').show();
-	alert(333);
-	/*
-	var display = elm.css('display');
-	if(display != 'none'){
-		jQuery('.dropdown-toolbar').hide();
-		return;
-	}
-
-	jQuery('.dropdown-toolbar').hide();
-	elm.show();*/
 }
