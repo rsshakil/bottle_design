@@ -6120,8 +6120,9 @@ function gridArt(elem)
 	});
 }
 function toobar_menu_text_onoff(div){
-	alert('test');
-	var elm = jQuery('.dropdown-toolbar-'+div);
+	alert(div);
+	jQuery('.dropdown-toolbar-'+div).show();
+	/*
 	var display = elm.css('display');
 	if(display != 'none'){
 		jQuery('.dropdown-toolbar').hide();
@@ -6129,5 +6130,5 @@ function toobar_menu_text_onoff(div){
 	}
 
 	jQuery('.dropdown-toolbar').hide();
-	elm.show();
+	elm.show();*/
 }
