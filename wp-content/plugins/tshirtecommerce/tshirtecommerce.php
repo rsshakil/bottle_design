@@ -995,7 +995,7 @@ function render_meta_on_cart_item( $title = null, $cart_item = null, $cart_item_
 				
 				echo 		'</tbody></table>';
 			}
-			
+			/*
 			echo '<dl class="variation">';
 			
 			if (isset($data['color_title']))
@@ -1065,6 +1065,7 @@ function render_meta_on_cart_item( $title = null, $cart_item = null, $cart_item_
 			}
 			
 			echo '</dl>';
+			*/
 		}
 		else
 		{
