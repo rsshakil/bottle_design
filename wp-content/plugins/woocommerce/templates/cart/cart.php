@@ -27,10 +27,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'プロダクト', 'woocommerce' ); ?></th>
+				<th class="product-price"><?php esc_html_e( '価格', 'woocommerce' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( '数量', 'woocommerce' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( '合計', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
